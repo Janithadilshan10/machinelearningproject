@@ -7,6 +7,11 @@ import numpy as np
 
 app = FastAPI()
 
+@app.get("/")
+def read_root():
+    return {"message": "Welcome to the FastAPI application!"}
+
+
 class model_input(BaseModel):
 
     High_Blood_Pressure: float
